@@ -29,8 +29,8 @@ content:
       - { name: title, label: Title, type: string }
       - { name: body, label: Body, type: rich-text, options: { input: public/assets, output: /assets } }
   - name: edition
-    label: Edition page
-    type: file
+    label: Editions
+    type: collection
     path: src/pages/editions
     fields:
       - { name: date, type: date, label: Date }
