@@ -1,5 +1,6 @@
 import { SITE } from "@config";
 import { defineCollection, z } from "astro:content";
+import { glob, file } from "astro/loaders";
 
 const blog = defineCollection({
   type: "content",
@@ -23,4 +24,12 @@ const blog = defineCollection({
     }),
 });
 
-export const collections = { blog };
+const edition = defineCollection({
+  loader: glob({ pattern: "*.yml", base: "./src/content/editions" }),
+  schema: z.object({
+    name: z.string(),
+    date: z.date(),
+  }),
+});
+
+export const collections = { blog, edition };

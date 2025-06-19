@@ -17,6 +17,10 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
+
+const edition = await getCollection("edition");
+
+console.log(edition);
 ---
 
 <Layout>
