@@ -31,7 +31,7 @@ content:
   - name: edition
     label: Editions
     type: collection
-    path: src/pages/editions
+    path: src/content/editions
     fields:
       - { name: date, type: date, label: Date }
       - { name: name, type: string, label: Name }
